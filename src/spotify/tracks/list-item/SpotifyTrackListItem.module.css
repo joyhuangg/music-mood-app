@@ -1,0 +1,9 @@
+.listItem{
+  border: 1px black solid;
+  border-radius: 12px;
+  align-items: center;
+  padding: 8px;
+  display: flex;
+  margin: 8px;
+  position: relative;
+}
