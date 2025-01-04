@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../stats-card/SpotifyTrackStatsCard.module.css'
+import mainStyle from "./SpotifyTrackSummary.module.css"
 
 export default function SpotifyTrackSummary({tracks}){
   // refactor -> array of keys, instantiate with 0, loop over keys dynamically
@@ -20,7 +21,7 @@ export default function SpotifyTrackSummary({tracks}){
   return <div>
             <h1> Summary of last {tracks.length} tracks</h1>
 
-            <ul>
+            <ul className={mainStyle.list}>
               <li className={trackAverages['acousticness'] > 0.5 ? style.positiveStat : style.negativeStat}>🪕 Acousticness: {trackAverages['acousticness']}</li>
 
               <li className={trackAverages['danceability'] > 0.5  ? style.positiveStat : style.negativeStat}>💃 Danceability: {trackAverages['danceability']}</li>
